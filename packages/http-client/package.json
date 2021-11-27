@@ -7,13 +7,12 @@
     "@types/node": "^15.12.4",
     "@typescript-eslint/eslint-plugin": "^4.27.0",
     "@typescript-eslint/parser": "^4.27.0",
-    "@yarnpkg/pnpify": "^3.0.0-rc.6",
     "eslint": "^7.29.0",
     "eslint-config-prettier": "^8.3.0",
     "lint-staged": "^11.0.0",
     "prettier": "^2.3.1",
-    "ts-node-dev": "^1.1.6",
-    "typescript": "^4.3.4"
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.5.2"
   },
   "lint-staged": {
     "*.{js,ts}": "eslint --cache --fix",
@@ -21,7 +20,7 @@
     "*.{js,css,md}": "prettier --write"
   },
   "scripts": {
-    "dev": "ts-node-dev --debug --respawn --transpile-only --exit-child ./src/index.ts",
+    "dev": "ts-node-dev --respawn --transpile-only --exit-child ./src/index.ts",
     "lint": "eslint --ext .js,.ts .",
     "lint-fix": "yarn lint --fix",
     "format": "prettier --write \"src/**/*.+(js|ts|json)\""
