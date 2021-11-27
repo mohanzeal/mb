@@ -15,12 +15,18 @@
     "typescript": "^4.5.2"
   },
   "lint-staged": {
-    "*.{js,ts}": "eslint --cache --fix",
-    "*.js": "eslint --cache --fix",
-    "*.{js,css,md}": "prettier --write"
+    "src/**/*.{js,ts,tsx,json,md}": [
+      "prettier --write"
+    ],
+    "*": [
+      "yarn lint",
+      "yarn test"
+    ]
   },
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only --exit-child ./src/index.ts",
+    "lint-staged": "echo 'running lint-staged in server package'  && lint-staged",
+    "test": "echo 'no tests in server package'",
     "lint": "eslint --ext .js,.ts .",
     "lint-fix": "yarn lint --fix",
     "format": "prettier --write \"src/**/*.+(js|ts|json)\""
