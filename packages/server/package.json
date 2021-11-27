@@ -25,7 +25,7 @@
   },
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only --exit-child ./src/index.ts",
-    "lint-staged": "echo 'running lint-staged in server package'  && lint-staged",
+    "lint-staged": "echo 'SERVER: running lint-staged -------'  && lint-staged",
     "test": "echo 'no tests in server package'",
     "lint": "eslint --ext .js,.ts .",
     "lint-fix": "yarn lint --fix",

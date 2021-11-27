@@ -25,7 +25,7 @@
   },
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only --exit-child ./src/index.ts",
-    "lint-staged": "echo 'running lint-staged in http-client package'  && lint-staged",
+    "lint-staged": "echo 'HTTP-CLIENT: running lint-staged -------'  && lint-staged",
     "test": "echo 'no tests in http-client'",
     "lint": "eslint --ext .js,.ts .",
     "lint-fix": "yarn lint --fix",
