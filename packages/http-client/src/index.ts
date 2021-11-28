@@ -1,3 +1,7 @@
+import AxiosHttpClient from './http/AxiosHttpClient'
 import Users from './users/users'
 
-export const HttpClient = { Users }
+export default {
+  axiosHttpClient: AxiosHttpClient.axiosInstance(),
+  users: new Users(),
+}

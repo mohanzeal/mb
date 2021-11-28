@@ -1,20 +1,16 @@
 import axios, { AxiosRequestConfig, Axios } from 'axios'
 
 export default class AxiosHttpClient {
-  readonly API_HOST = `http:localhost:3000`
-  axiosClient: Axios
+  private static _instance: Axios
+  private static API_HOST = `http:localhost:3000`
 
-  constructor() {
-    this.axiosClient = this.createAxiosInstance()
-  }
-
-  createAxiosInstance(): Axios {
+  public static get axiosInstance(): Axios {
     const axiosRequestConfig: AxiosRequestConfig = {
       baseURL: this.API_HOST,
       timeout: 1000,
       // headers: { 'X-Custom-Header': 'foobar' }
     }
 
-    return axios.create(axiosRequestConfig)
+    return this._instance || (this._instance = axios.create(axiosRequestConfig))
   }
 }
