@@ -4,6 +4,7 @@
   "main": "lib/index.js",
   "license": "MIT",
   "devDependencies": {
+    "@types/express": "^4.17.13",
     "@typescript-eslint/eslint-plugin": "^4.27.0",
     "@typescript-eslint/parser": "^4.27.0",
     "eslint": "^7.29.0",
@@ -24,6 +25,8 @@
   },
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only --exit-child ./src/index.ts",
+    "build": "pnpify tsc",
+    "serve": "pnpify node ./build/index.js",
     "lint-staged": "echo 'SERVER: running lint-staged -------'  && lint-staged",
     "test": "echo 'no tests in server package'",
     "lint": "eslint --ext .js,.ts .",
@@ -31,6 +34,7 @@
     "format": "prettier --write \"src/**/*.+(js|ts|json)\""
   },
   "dependencies": {
+    "@yarnpkg/pnpify": "^3.1.1-rc.6",
     "express": "^4.17.1"
   }
 }
