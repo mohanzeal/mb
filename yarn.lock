@@ -2055,7 +2055,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mb/http-client@workspace:packages/http-client":
+"@mb/http-client@1.0.0, @mb/http-client@workspace:packages/http-client":
   version: 0.0.0-use.local
   resolution: "@mb/http-client@workspace:packages/http-client"
   dependencies:
@@ -2076,6 +2076,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@mb/react-app@workspace:packages/react-app"
   dependencies:
+    "@mb/http-client": 1.0.0
     "@testing-library/jest-dom": ^5.11.4
     "@testing-library/react": ^11.1.0
     "@testing-library/user-event": ^12.1.10
