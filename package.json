@@ -17,7 +17,8 @@
     "lint": "yarn workspaces foreach run lint",
     "format": "yarn workspaces foreach run format",
     "server": "yarn workspace @mb/server",
-    "http-client": "yarn workspace @mb/http-client"
+    "http-client": "yarn workspace @mb/http-client",
+    "react-app": "yarn workspace @mb/react-app"
   },
   "dependencies": {
     "@yarnpkg/pnpify": "^3.1.1-rc.6"
