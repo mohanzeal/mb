@@ -5,13 +5,15 @@
     "sourceType": "module"
   },
   "plugins": [
-    "@typescript-eslint"
+    "@typescript-eslint",
+    "cypress"
   ],
   // HERE
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-    "prettier"
+    "prettier",
+    "plugin:cypress/recommended"
   ],
   "rules": {
     "@typescript-eslint/no-unused-vars": "warn",

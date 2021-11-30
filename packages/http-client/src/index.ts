@@ -1,5 +1,5 @@
-export default {
-  users: {
-    name: 'John 1',
-  },
+import { userHttpClient } from './users'
+
+export const httpClient = {
+  userHttpClient,
 }
