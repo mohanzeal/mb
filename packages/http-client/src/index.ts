@@ -1,5 +1,5 @@
 export default {
   users: {
-    name: 'John',
+    name: 'John 1',
   },
 }
