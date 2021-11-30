@@ -8,6 +8,7 @@ The main goal of this repo is to create a monorepo using below features
   - Eslint
   - Prettier
   - ts-node-dev for reloading all typescript files in development.
+  - husky for git hooks
   
   
 ### Unfortunately
