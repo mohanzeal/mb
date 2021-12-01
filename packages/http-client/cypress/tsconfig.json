@@ -1,13 +1,16 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "ESNext",
     "lib": [
-      "es5",
+      "ESNext",
       "dom"
     ],
     "types": [
       "cypress"
-    ]
+    ],
+    "importHelpers": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
   },
   "include": [
     "**/*.ts"

@@ -29,7 +29,8 @@
     "build": "pnpify tsc",
     "lint-staged": "echo 'HTTP-CLIENT: running lint-staged -------'  && lint-staged",
     "test": "echo 'no tests in http-client'",
-    "test:api": "npx cypress run --spec 'cypress/integration/api/*' --config baseUrl='http://localhost:8000'",
+    "test:api": "cypress run --spec 'cypress/integration/api/*'",
+    "test:gui": "cypress open",
     "lint": "eslint --ext .js,.ts .",
     "lint-fix": "yarn lint --fix",
     "format": "prettier --write \"src/**/*.+(js|ts|json)\""
