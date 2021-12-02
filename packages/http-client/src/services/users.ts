@@ -1,22 +1,19 @@
-import axios, { AxiosResponse } from 'axios'
-import { User } from '../types/users'
+import { AxiosResponse } from 'axios'
+import { axiosInstance } from '../config/axios'
+import { IUser } from '../types/users'
 
-const getUsers = async (): Promise<User[] | undefined> => {
+const getUsers = async (): Promise<IUser[] | undefined> => {
   try {
-    const response: AxiosResponse = await axios.get(
-      'http://localhost:8000/users'
-    )
+    const response: AxiosResponse = await axiosInstance.get('/users')
 
     if (response.status === 200) {
       return response.data
     }
-
-    throw new Error('get Users failed')
   } catch (e) {
-    console.log(e)
+    console.log(`%chttp-client:getUsers ${e}`, 'background:red;color:#fff')
   }
 }
 
-export const userHttpClient = {
+export default {
   getUsers,
 }

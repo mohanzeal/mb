@@ -1,6 +1,4 @@
-export type User = {
+export type IUser = {
   id: number
-  fname: string
-  lname: string
-  mname: string
+  name: string
 }
