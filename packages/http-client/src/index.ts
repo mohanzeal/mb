@@ -1,5 +1,5 @@
 // services
-export * as users from './services/users'
+export { default as usersHttpClient } from './services/users'
 
 //types
-export * as types from './types/users'
+export * from './types/users'
