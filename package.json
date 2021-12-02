@@ -6,6 +6,7 @@
   ],
   "packageManager": "yarn@3.1.1",
   "devDependencies": {
+    "concurrently": "^6.4.0",
     "eslint": "^7.11.0",
     "husky": "^7.0.4",
     "lint-staged": "^12.1.2",
@@ -13,12 +14,11 @@
     "typescript": "^4.5.2"
   },
   "scripts": {
-    "build": "yarn workspaces foreach run build",
-    "lint": "yarn workspaces foreach run lint",
-    "format": "yarn workspaces foreach run format",
+    "dev": "concurrently -n 'server,http-client,react-app' -c 'red,yellow,green' 'yarn server dev' 'yarn http-client dev' 'yarn react-app dev'",
     "server": "yarn workspace @mb/server",
     "http-client": "yarn workspace @mb/http-client",
-    "react-app": "yarn workspace @mb/react-app"
+    "react-app": "yarn workspace @mb/react-app",
+    "build": "yarn workspaces foreach run build"
   },
   "dependencies": {
     "@yarnpkg/pnpify": "^3.1.1-rc.6"
