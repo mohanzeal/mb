@@ -11,6 +11,7 @@ app.get('/users', async (req: Request, res: Response): Promise<Response> => {
     {
       name: 'john doe',
       id: 1,
+      lname: 'doe',
     },
   ])
 })

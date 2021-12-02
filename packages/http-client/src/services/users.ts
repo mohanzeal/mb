@@ -1,6 +1,7 @@
 import axios, { AxiosResponse } from 'axios'
+import { User } from '../types/users'
 
-const getUsers = async (): Promise<any> => {
+const getUsers = async (): Promise<User[] | undefined> => {
   try {
     const response: AxiosResponse = await axios.get(
       'http://localhost:8000/users'
