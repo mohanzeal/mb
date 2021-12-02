@@ -1,5 +1,5 @@
-import { userHttpClient } from './users'
+// services
+export * as users from './services/users'
 
-export const httpClient = {
-  userHttpClient,
-}
+//types
+export * as types from './types/users'

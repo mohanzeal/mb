@@ -5,7 +5,7 @@ import httpClient from '@mb/http-client';
 export default class App extends Component {
 
   componentDidMount() {
-    console.log(httpClient.users);
+    console.log(httpClient);
   }
 
   render() {
