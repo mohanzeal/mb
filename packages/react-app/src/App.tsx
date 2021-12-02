@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import {usersHttpClient, IUser} from '@mb/http-client';
+import React, { Component } from 'react'
+import logo from './logo.svg'
+import './App.css'
+import { usersHttpClient, IUser } from '@mb/http-client'
 
 type State = {
   users: IUser[]
@@ -9,13 +9,13 @@ type State = {
 type Props = {}
 export default class App extends Component<Props, State> {
   constructor(props: Props) {
-    super(props);
+    super(props)
 
-    this.state = {users: []}
+    this.state = { users: [] }
   }
   async componentDidMount() {
-    const users: IUser[] = await usersHttpClient.getUsers() || [];
-    this.setState({users})
+    const users: IUser[] = (await usersHttpClient.getUsers()) || []
+    this.setState({ users })
   }
 
   render() {
@@ -28,12 +28,14 @@ export default class App extends Component<Props, State> {
           </p>
           <div>
             <h3>Users data from server</h3>
-          {this.state.users.map((user: IUser, index: number) => (
-            <div key={index}>{user.id} - {user.name}</div>
-          ))}
+            {this.state.users.map((user: IUser, index: number) => (
+              <div key={index}>
+                {user.id} - {user.name}
+              </div>
+            ))}
           </div>
         </header>
       </div>
-    );
+    )
   }
 }
