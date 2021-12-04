@@ -1,9 +1,13 @@
-import express, { Application, Request, Response } from 'express'
+import express, { Application } from 'express'
 import { allowCros } from './config/cors'
+import swaggerOptions from './config/swagger'
+import { userRoutes } from './routes/users'
+
+// TODO: Move to config variables or environment variables
+const port = 8001
+const API_BASE = '/api/v1'
 
 const app: Application = express()
-const port = 8001
-
 // app cors
 app.use(allowCros)
 
@@ -11,18 +15,15 @@ app.use(allowCros)
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
-app.get('/users', async (req: Request, res: Response): Promise<Response> => {
-  return res.status(200).send([
-    {
-      id: 1,
-      name: 'John doe',
-    },
-    {
-      id: 2,
-      name: 'Sammy doe',
-    },
-  ])
-})
+// swagger docs
+app.use(
+  API_BASE + '/docs',
+  swaggerOptions.swaggerServe,
+  swaggerOptions.swaggerSetup
+)
+
+// api routes
+app.use(API_BASE + '/users', userRoutes)
 
 try {
   app.listen(port, (): void => {
