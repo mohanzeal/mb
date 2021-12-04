@@ -14,7 +14,7 @@ export default class App extends Component<Props, State> {
     this.state = { users: [] }
   }
   async componentDidMount() {
-    const users: IUser[] = (await usersHttpClient.getUsers()) || []
+    const users: IUser[] = (await usersHttpClient.getAllUsers()) || []
     this.setState({ users })
   }
 
@@ -30,7 +30,7 @@ export default class App extends Component<Props, State> {
             <h3>Users data from server</h3>
             {this.state.users.map((user: IUser, index: number) => (
               <div key={index}>
-                {user.id} - {user.name}
+                {user.id} - {user.name} - {user.email} - {user.phone}
               </div>
             ))}
           </div>

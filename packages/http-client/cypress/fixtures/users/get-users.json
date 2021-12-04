@@ -1,10 +1,16 @@
 [
   {
     "id": 1,
-    "name": "John doe"
+    "name": "John",
+    "email": "john@email.com",
+    "phone": "0965432123",
+    "status": "active"
   },
   {
     "id": 2,
-    "name": "Sammy doe"
+    "name": "Sammy",
+    "email": "sammy@email.com",
+    "phone": "2165432123",
+    "status": "active"
   }
 ]
