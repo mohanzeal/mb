@@ -2214,6 +2214,21 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@mb/next-app@workspace:packages/next-app":
+  version: 0.0.0-use.local
+  resolution: "@mb/next-app@workspace:packages/next-app"
+  dependencies:
+    "@types/node": 16.11.11
+    "@types/react": 17.0.37
+    eslint: 8.4.0
+    eslint-config-next: 12.0.7
+    next: 12.0.7
+    react: 17.0.2
+    react-dom: 17.0.2
+    typescript: 4.5.2
+  languageName: unknown
+  linkType: soft
+
 "@mb/react-app@workspace:packages/react-app":
   version: 0.0.0-use.local
   resolution: "@mb/react-app@workspace:packages/react-app"
@@ -12308,21 +12323,6 @@ __metadata:
   checksum: deac9f8d00eda7b2e5cd1b2549e26e10a0faa70adaa6fdadca701cc55f49ee9018e427f424bac0c790b7c7e2d3068db97f3093f1093975f2acb8f8818b936ed9
   languageName: node
   linkType: hard
-
-"next-app@workspace:packages/next-app":
-  version: 0.0.0-use.local
-  resolution: "next-app@workspace:packages/next-app"
-  dependencies:
-    "@types/node": 16.11.11
-    "@types/react": 17.0.37
-    eslint: 8.4.0
-    eslint-config-next: 12.0.7
-    next: 12.0.7
-    react: 17.0.2
-    react-dom: 17.0.2
-    typescript: 4.5.2
-  languageName: unknown
-  linkType: soft
 
 "next-tick@npm:~1.0.0":
   version: 1.0.0

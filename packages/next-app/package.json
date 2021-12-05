@@ -1,11 +1,13 @@
 {
-  "name": "next-app",
+  "name": "@mb/next-app",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3001",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export:ssr": "yarn build",
+    "export:static": "yarn build && next export -o build"
   },
   "dependencies": {
     "next": "12.0.7",
