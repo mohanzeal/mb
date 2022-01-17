@@ -6,6 +6,7 @@
   ],
   "packageManager": "yarn@3.1.1",
   "devDependencies": {
+    "@vue/cli-plugin-eslint": "~4.5.0",
     "concurrently": "^6.4.0",
     "eslint": "^7.11.0",
     "husky": "^7.0.4",
@@ -14,13 +15,13 @@
     "typescript": "^4.5.2"
   },
   "scripts": {
-    "dev": "concurrently -n 'server,http-client,react-app' -c 'red,yellow,green' 'yarn server dev' 'yarn http-client dev' 'yarn react-app dev'",
-    "server": "yarn workspace @mb/server",
+    "dev": "concurrently -n 'server,veutify' -c 'red,yellow' 'yarn http-client dev' 'yarn vuetify serve'",
     "http-client": "yarn workspace @mb/http-client",
-    "react-app": "yarn workspace @mb/react-app",
+    "vuetify": "yarn workspace @mb/vuetify",
     "build": "yarn workspaces foreach run build"
   },
   "dependencies": {
-    "@yarnpkg/pnpify": "^3.1.1-rc.6"
+    "@yarnpkg/pnpify": "^3.1.1-rc.6",
+    "node-gyp": "^8.4.1"
   }
 }

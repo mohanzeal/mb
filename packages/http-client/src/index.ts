@@ -1,5 +1,5 @@
 // services
-export { default as usersHttpClient } from './services/users'
-
+export const getUsers = () => {
+  console.log('get Users')
+}
 //types
-export * from './types/users'
